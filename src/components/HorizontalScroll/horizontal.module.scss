@@ -1,0 +1,63 @@
+.main {
+  overflow-x: hidden;
+  margin: 50px 0px;
+
+  .slider {
+    display: flex;
+    width: 300vw;
+    height: 100vh;
+    background-color: black;
+
+    .section {
+      position: relative;
+      padding: 50px;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      flex-grow: 1;
+      position: relative;
+      background-color: black;
+      color: white;
+
+      //   &:nth-of-type(2) {
+      //     background-color: rgb(25, 25, 25);
+      //   }
+
+      .title {
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 25px;
+        width: fit-content;
+        margin-bottom: 25px;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        right: 50px;
+      }
+    }
+  }
+}
+
+// .pin-spacer {
+//   margin: 50px 0px;
+// }
+
+@media screen and (max-width: 700px) {
+  .section {
+    padding: 25px !important;
+
+    .title {
+      top: 25px !important;
+      left: 25px !important;
+    }
+
+    .footer {
+      bottom: 25px !important;
+      left: 25px !important;
+      right: 25px !important;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.nav {
+  z-index: 99;
+  padding: 100px 25px;
+
+  .linkcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .link {
+      color: black;
+      text-decoration: none;
+      font-size: 40px;
+    }
+
+    .arrow {
+      width: 40px;
+      height: 40px;
+      transition: 0.3s;
+      transform: rotateY(180deg);
+    }
+
+    &:hover {
+      .arrow {
+        transform: rotateZ(135deg);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+  }
+}

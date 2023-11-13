@@ -1,0 +1,116 @@
+.project {
+  display: flex;
+  margin: 50px 0px;
+  position: relative;
+  overflow: hidden;
+
+  .imagecontainer {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 1vw;
+
+    .image {
+      max-width: 500px;
+      height: auto;
+      scale: 1.2;
+      transition: 0.3s;
+    }
+
+    .hoverimg {
+      display: none;
+    }
+
+    &:hover {
+      .image {
+        scale: 1.1;
+        filter: blur(0.3em);
+        transition: 0.3s;
+      }
+
+      .hoverimg {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+          cursor: pointer;
+          border-radius: 25px;
+          border: none;
+          overflow: hidden;
+
+          .slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .el {
+              padding: 0.5em 1em;
+              background-color: #c9fd74;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-transform: uppercase;
+            }
+
+            &:hover {
+              .perspectiveText {
+                transform: rotateX(90deg);
+                p {
+                  &:nth-of-type(1) {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                  }
+                  &:nth-of-type(2) {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.perspectiveText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  p {
+    transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+    pointer-events: none;
+    text-transform: uppercase;
+    &:nth-of-type(2) {
+      position: absolute;
+      transform-origin: bottom center;
+      transform: rotateX(-90deg) translateY(9px);
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .image {
+    max-width: 100% !important;
+  }
+}

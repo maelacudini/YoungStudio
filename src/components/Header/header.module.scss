@@ -1,0 +1,11 @@
+.main {
+  position: relative;
+  z-index: 98;
+  padding: 20px;
+
+  .menu {
+    background-color: #c9fd74;
+    border-radius: 25px;
+    position: absolute;
+  }
+}
