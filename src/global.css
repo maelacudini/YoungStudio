@@ -51,6 +51,10 @@ a {
   font-weight: 400;
 }
 
+button {
+  color: black !important;
+}
+
 b {
   font-weight: 500;
 }

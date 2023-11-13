@@ -18,7 +18,7 @@ export default function Home() {
       <Title />
       <ParallaxGallery />
       <Projects />
-      <HorizontalScroll />
+      {/* <HorizontalScroll /> */}
     </motion.div>
   );
 }
