@@ -10,7 +10,7 @@ export default function Header() {
 
   const menu = {
     open: {
-      width: "300px",
+      width: "350px",
       height: "500px",
       top: "10px",
       right: "10px",
