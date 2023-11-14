@@ -3,10 +3,27 @@ import style from "./projectdetail.module.scss";
 import { projects } from "../Projects/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Gallery from "./Gallery/Gallery";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { generals } from "../../utils/animations";
 
 export default function ProjectDetail() {
+  //get the device height
+  const [deviceHeight, setDeviceHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDeviceHeight(window.innerHeight);
+    };
+
+    // Add an event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   //get at the top of the page
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +65,7 @@ export default function ProjectDetail() {
       exit="exit"
       className={style.projectdetail}
     >
-      <div className={style.parallax}>
+      <div className={style.parallax} style={{ height: deviceHeight }}>
         <motion.img style={{ y: parallax }} alt="image" src={project.url} />
         <Link className={style.back} to="/">
           Back Home

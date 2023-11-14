@@ -17,10 +17,7 @@ export default function Project({ project, index }) {
       className={style.project}
     >
       <div>
-        <div className={style.description}>
-          <p>{title}</p>
-          <p>{index}</p>
-        </div>
+        <p>{title}</p>
         <div className={style.imagecontainer}>
           <motion.img
             variants={generals}

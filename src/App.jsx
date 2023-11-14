@@ -28,7 +28,7 @@ export default function App() {
   return (
     <main>
       <AnimatePresence mode="wait">
-        {showIntro && <Intro key={"intro"} />}
+        {/* {showIntro && <Intro key={"intro"} />} */}
         <Routes location={location} key={location.key}>
           <Route exact path="/" element={<Home />} />
           <Route exact path="projectdetail/:id" element={<ProjectDetail />} />

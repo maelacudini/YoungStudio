@@ -7,14 +7,14 @@ const images = [
   "Architecture/2.jpg",
   "Architecture/3.jpg",
   "Architecture/4.jpg",
-  "Interior/1.jpg",
-  "Interior/2.jpg",
-  "Interior/3.jpg",
-  "Interior/4.jpg",
-  "Photography/1.jpg",
-  "Photography/2.jpg",
-  "Photography/3.jpg",
-  "Photography/4.jpg",
+  "Architecture/1.jpg",
+  "Architecture/2.jpg",
+  "Architecture/3.jpg",
+  "Architecture/4.jpg",
+  "Architecture/1.jpg",
+  "Architecture/2.jpg",
+  "Architecture/3.jpg",
+  "Architecture/4.jpg",
 ];
 
 export default function ParallaxGallery() {

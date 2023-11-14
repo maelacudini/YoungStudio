@@ -10,7 +10,7 @@ export default function Button({ setIsActive, isActive }) {
       className={style.btn}
     >
       <motion.div
-        animate={{ top: isActive ? "-100%" : "0" }}
+        animate={{ top: isActive ? "-100%" : "0%" }}
         transition={{
           duration: 0.5,
           type: "tween",
